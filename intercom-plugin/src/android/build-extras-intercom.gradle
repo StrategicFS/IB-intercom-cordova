@@ -5,7 +5,7 @@ import java.util.regex.Matcher
 // 
 // @link https://issues.apache.org/jira/browse/CB-10014
 def manifest = new XmlSlurper().parse(file("src/main/AndroidManifest.xml"))
-android.defaultConfig.applicationId manifest.@package.text()
+// android.defaultConfig.applicationId manifest.@package.text()
 
 // some libraries depend on higher versions of our dependencies than we support
 // we keep track of these dependencies here and override the version to a safe one
@@ -51,20 +51,20 @@ private static String guideUrl() {
 private void logIfIncorrectCompileSdkVersion() {
     // this can be `{number}` or `android-{number}`
     // regex checks that it ends with a number between 16 and 26 inclusive
-    if (cdvCompileSdkVersion != null && cdvCompileSdkVersion =~ /.*(1[6-9]|2[0-6])$/) {
-        logger.error("${errorPrefix()} cdvCompileSdkVersion = ${cdvCompileSdkVersion}. \n" +
-                "You need to use a cdvCompileSdkVersion of at least 27.\n" +
-                "See here for more: ${guideUrl()}\n")
-    }
+    // if (cdvCompileSdkVersion != null && cdvCompileSdkVersion =~ /.*(1[6-9]|2[0-6])$/) {
+    //     logger.error("${errorPrefix()} cdvCompileSdkVersion = ${cdvCompileSdkVersion}. \n" +
+    //             "You need to use a cdvCompileSdkVersion of at least 27.\n" +
+    //             "See here for more: ${guideUrl()}\n")
+    // }
 }
 
 private void logIfIncorrectBuildToolsVersion() {
     // regex checks for a major version between 16 and 26 inclusive
-    if (cdvBuildToolsVersion != null && cdvBuildToolsVersion =~ /(1[6-9]|2[0-6])\..+$/) {
-        logger.error("${errorPrefix()}  cdvBuildToolsVersion = ${cdvBuildToolsVersion}. \n" +
-                "You need to use a cdvBuildToolsVersion of at least 27.0.0.\n" +
-                "See here for more: ${guideUrl()}\n")
-    }
+    // if (cdvBuildToolsVersion != null && cdvBuildToolsVersion =~ /(1[6-9]|2[0-6])\..+$/) {
+    //     logger.error("${errorPrefix()}  cdvBuildToolsVersion = ${cdvBuildToolsVersion}. \n" +
+    //             "You need to use a cdvBuildToolsVersion of at least 27.0.0.\n" +
+    //             "See here for more: ${guideUrl()}\n")
+    // }
 }
 
 private void logIncompatibleDependencies(config) {
