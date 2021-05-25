@@ -1,9 +1,9 @@
 {
   "name": "cordova-plugin-intercom",
   "version": "9.4.0",
-  "description": "UnOfficial Cordova/PhoneGap plugin for Intercom",
+  "description": "Official Cordova/PhoneGap plugin for Intercom",
   "cordova": {
-    "id": "cordova-plugin-strategic",
+    "id": "cordova-plugin-intercom",
     "platforms": [
       "ios",
       "android"
@@ -19,6 +19,20 @@
     "ecosystem:cordova",
     "cordova-ios",
     "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=9.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=9.0.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=6.1.1"
+    }
   ],
   "author": "Intercom",
   "license": "MIT License",
