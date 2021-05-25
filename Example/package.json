@@ -1,5 +1,5 @@
 {
-    "name": "io.intercom.cordova.sample",
+    "name": "com.stratfs.cordova.intercom",
     "version": "0.0.1",
     "displayName": "Intercom Cordova",
     "cordova": {
