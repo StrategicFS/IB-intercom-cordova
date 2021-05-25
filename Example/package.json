@@ -1,6 +1,7 @@
 {
     "name": "com.stratfs.cordova.intercom",
     "version": "0.0.1",
+    "private": true,
     "displayName": "Intercom Cordova",
     "cordova": {
         "platforms": [
